@@ -1,7 +1,7 @@
 from flask import Flask, Response, request
 from datetime import datetime
 import json
-from columbia_student_resource import ColumbiaStudentResource
+from columbia_student_resource import ColumbiaStudentResource, ColumbiaCoursesResource
 from flask_cors import CORS
 
 # Create the Flask application object.
@@ -22,7 +22,6 @@ def get_health():
         "at time": t
     }
 
-    # DFF TODO Explain status codes, content type, ... ...
     result = Response(json.dumps(msg), status=200, content_type="application/json")
 
     return result

@@ -34,4 +34,3 @@ class ColumbiaStudentResource:
         result = cur.fetchone()
 
         return result
-
